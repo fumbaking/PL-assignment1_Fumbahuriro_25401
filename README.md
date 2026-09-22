@@ -143,7 +143,11 @@ a readable transaction log showing who bought and where they are based.
 Because it is an INNER JOIN, only orders with a matching customer appear —
 15 rows, one per order.
 
-*Screenshot: `01_inner_join_orders_customers.png`*
+**Result:**
+
+![Query 1 - INNER JOIN: every order with its customer name and city](screenshots/01_inner_join_orders_customers.png)
+
+*Figure: Query 1 - INNER JOIN: every order with its customer name and city*
 
 ---
 
@@ -166,7 +170,11 @@ is actually selling and in what quantities, which is the input to restocking
 decisions. It also shows category mix per basket — useful for spotting that
 Groceries carry the high unit prices while Beverages drive volume.
 
-*Screenshot: `02_join_order_items_products.png`*
+**Result:**
+
+![Query 2 - INNER JOIN: order lines with product name, category and price](screenshots/02_join_order_items_products.png)
+
+*Figure: Query 2 - INNER JOIN: order lines with product name, category and price*
 
 ---
 
@@ -190,7 +198,11 @@ actionable row in the whole result set: it identifies a dormant account for
 a re-engagement campaign. An INNER JOIN would have hidden him completely,
 and the store would never know he existed as a lost opportunity.
 
-*Screenshot: `03_left_join_customers_orders.png`*
+**Result:**
+
+![Query 3 - LEFT JOIN: all customers, including Patrick Habimana with NULL order columns](screenshots/03_left_join_customers_orders.png)
+
+*Figure: Query 3 - LEFT JOIN: all customers, including Patrick Habimana with NULL order columns*
 
 ---
 
@@ -228,7 +240,11 @@ each customer spent, then keep the ones above the average."
 revenue. They are the natural target for a loyalty programme, because
 retaining one of them is worth more than acquiring several average shoppers.
 
-*Screenshot: `04_cte_above_average_spend.png`*
+**Result:**
+
+![Query 4 - CTE: customers whose total spend exceeds the average](screenshots/04_cte_above_average_spend.png)
+
+*Figure: Query 4 - CTE: customers whose total spend exceeds the average*
 
 ---
 
@@ -266,7 +282,11 @@ customers tied for second means nobody is third.
 **Business interpretation:** gives management a defensible ordering for
 tiered rewards instead of an impression of who "feels" like a big spender.
 
-*Screenshot: `05_rank_customers.png`*
+**Result:**
+
+![Query 5 - RANK(): customers ranked by total spend](screenshots/05_rank_customers.png)
+
+*Figure: Query 5 - RANK(): customers ranked by total spend*
 
 ---
 
@@ -294,7 +314,11 @@ customer journey. It makes it possible to isolate first purchases (where
 `order_number = 1`) to measure acquisition, or to study what a customer
 typically buys on their second visit versus their first.
 
-*Screenshot: `06_number_customer_orders.png`*
+**Result:**
+
+![Query 6 - ROW_NUMBER(): each customer's orders numbered from their own first purchase](screenshots/06_number_customer_orders.png)
+
+*Figure: Query 6 - ROW_NUMBER(): each customer's orders numbered from their own first purchase*
 
 ---
 
@@ -329,7 +353,11 @@ total shows progress. A manager tracking a monthly revenue target reads the
 running total to answer "are we on pace?" — a question a simple daily
 breakdown cannot answer at a glance.
 
-*Screenshot: `07_running_revenue.png`*
+**Result:**
+
+![Query 7 - running total: cumulative revenue by order date](screenshots/07_running_revenue.png)
+
+*Figure: Query 7 - running total: cumulative revenue by order date*
 
 ---
 
@@ -371,7 +399,11 @@ customer whose gap suddenly widens from 3 days to 10 is drifting away, and
 the store can intervene before losing them. Averaging the gap per customer
 gives a baseline "expected return window" for each shopper.
 
-*Screenshot: `08_days_between_orders.png`*
+**Result:**
+
+![Query 8 - LAG(): days between each repeat customer's consecutive orders](screenshots/08_days_between_orders.png)
+
+*Figure: Query 8 - LAG(): days between each repeat customer's consecutive orders*
 
 ---
 
