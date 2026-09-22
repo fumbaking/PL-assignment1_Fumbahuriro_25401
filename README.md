@@ -2,10 +2,7 @@
 
 **Student:** Fumba Huriro
 **Student ID:** 25401
-**Programme:** BSc Information Management, Adventist University of Central Africa (AUCA)
-**Course:** Database Development with PL/SQL
-**Submission date:** September 2026
-**DBMS used:** PostgreSQL 17 (psql command-line shell)
+
 
 ---
 
